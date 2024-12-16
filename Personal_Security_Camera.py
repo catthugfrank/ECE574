@@ -25,7 +25,7 @@ encoder = H264Encoder(10000000)
 smtp_server = 'smtp.gmail.com'
 smtp_port = 587
 username = 'frankvu25@gmail.com'
-password = 'cxtw dyjc ygoo sgyq'
+password = '' #your smtp password here
 
 sender_email = 'frankvu25@gmail.com'
 receiver_email = 'eabrego@umich.edu'
