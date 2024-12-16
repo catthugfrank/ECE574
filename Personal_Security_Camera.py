@@ -89,17 +89,11 @@ def auth_setup():
     totp = pyotp.TOTP(secret_key, interval=300)
     otp = totp.now()
     timeout = time.time() + 60*5
-
     send_email('Camera 2FA','Your 2FA code is ' + otp)
-
     timeout = 300   # [seconds]
-
     timeout_start = time.time()
-
     while time.time() < timeout_start + timeout:
-
         user_input = input("Enter the OTP or enter exit to leave: ")
-        
         if user_input=='exit':
             break
         elif totp.verify(user_input):
@@ -110,8 +104,6 @@ def auth_setup():
     return False
 
 
-
-  
 auth = auth_setup()
 
 if auth:
